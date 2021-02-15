@@ -1,5 +1,6 @@
 const http = require('http')
 const fs = require('fs')
+
 const port = process.env.port || 3000;
 
 const server = http.createServer(function(req, res) {
@@ -14,14 +15,6 @@ const server = http.createServer(function(req, res) {
         res.end()
     })
 })
-
-function css(request, response) {
-    if (request.url === '/styles.css') {
-      response.writeHead(200, {'Content-type' : 'text/css'});
-      var fileContents = fs.readFileSync('./views/styles.css', {encoding: 'utf8'});
-      response.write(fileContents);
-    }
-  }  
 
 server.listen(port, function(error) {
 if (error) {
