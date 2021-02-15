@@ -14,11 +14,17 @@
         color: white;
         margin-left: 20px;
         font-family: Tahoma, Verdana, sans-serif;
-        align-self: center;
+        text-align: center;
     }
+
+    .cen {
+    display: flex;
+    justify-content: center;
+    }
+
     .button {
     border-radius: 4px;
-    background-color: #f4511e;
+    background-color: #4e465f;
     border: none;
     color: #FFFFFF;
     text-align: center;
@@ -27,7 +33,8 @@
     width: 200px;
     transition: all 0.5s;
     cursor: pointer;
-    margin: 5px;
+    display: flex;
+    justify-content: center;
     }
 
     .button span {
@@ -57,6 +64,9 @@
 </style>
 </head>
 <body>
-    <h1>RecipeJSC</h1>
+    <div class="cen">
+            <button class="button"><span>RecipeJSC </span></button>
+    </div>
+    <h1>Hi</h1>
 </body>
 </html>
