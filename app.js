@@ -15,6 +15,14 @@ const server = http.createServer(function(req, res) {
     })
 })
 
+function css(request, response) {
+    if (request.url === '/styles.css') {
+      response.writeHead(200, {'Content-type' : 'text/css'});
+      var fileContents = fs.readFileSync('./views/styles.css', {encoding: 'utf8'});
+      response.write(fileContents);
+    }
+  }  
+
 server.listen(port, function(error) {
 if (error) {
     console.log('Smething went Wrong', error)
